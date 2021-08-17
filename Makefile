@@ -6,3 +6,9 @@ down:
 
 up: down
 	docker-compose up
+
+ping-raw:
+	curl -H "Host: prerender.lvh.voronenko.net:80"  http://localhost:5080
+
+ping-bot:
+	curl -A googlebot -H "Host: prerender.lvh.voronenko.net:80"  http://localhost:5080
